@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<sdf version="1.10">
+  <model name="helipad">
+    <static>true</static>
+    <link name="link">
+      <!-- FIX: Rotates the Y-up GLB mesh by 90 degrees around X so it lies perfectly flat on the ground -->
+      <pose>0 0 0 1.5708 0 0</pose>
+
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>meshes/helipad.glb</uri>
+            <!-- FIX: Scaled down from 0.60 to 0.12 so it is realistic next to the buildings -->
+            <scale>0.12 0.12 0.12</scale>
+          </mesh>
+        </geometry>
+      </visual>
+
+ 
+    </link>
+  </model>
+</sdf>
+
+

@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<sdf version="1.10">
+  <world name="finalproject1">
+  
+<!-- Physics — required rate for PX4 sensor integration -->
+    <physics type="ode">
+      <max_step_size>0.004</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+      <real_time_update_rate>250</real_time_update_rate>
+    </physics>
+
+    <!-- Required by PX4 sensor plugins via server.config -->
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type="adiabatic"/>
+
+    <!-- GPS home position — required for NavSat/GPS sensor -->
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <world_frame_orientation>ENU</world_frame_orientation>
+      <latitude_deg>47.397971057728974</latitude_deg>
+      <longitude_deg>8.546163739800146</longitude_deg>
+      <elevation>0</elevation>
+    </spherical_coordinates>
+    <!-- Sun / lighting -->
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 50 0 0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>0.5 0.5 0.5 1</specular>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <!-- Ground Plane (Ensures everything has a surface underneath) -->
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry><plane><normal>0 0 1</normal></plane></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><plane><normal>0 0 1</normal><size>100 100</size></plane></geometry>
+          <material>
+            <diffuse>0.3 0.3 0.3 1</diffuse>
+            <ambient>0.3 0.3 0.3 1</ambient>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ============ HOSPITAL 1 (Main Building) ============ -->
+    <include>
+      <uri>model://hospital</uri>
+      <name>hospital</name>
+      <pose>5.72 -2.44 0.07 1.56 0 0</pose>  
+    </include>
+
+    <!-- ============ HOSPITAL 2 ============ -->
+    <include>
+      <uri>model://hospital</uri>
+      <name>hospital2</name>
+      <pose>-6.01 2.39 -0.05 1.58 -0.01 3.13</pose>
+    </include>
+
+   <include>
+      <uri>model://helipad</uri>
+      <name>helipad1</name>
+      <pose>-8.73 -1.78 0.21 0 0 0</pose>
+    </include>
+
+    <!-- ============ HELIPAD 2 (Beside Hospital 2 on the ground) ============ -->
+    <include>
+      <uri>model://helipad</uri>
+      <name>helipad2</name>
+      <pose> 6.07 1.60 0.22 0.03 0 0 </pose>
+    </include>
+  
+  <!-- ============ MODEL FOUNTAIN (Base Complex) ============ -->
+<include>                       
+      <uri>model://fountain</uri>
+      <name>fountain</name>
+      <pose>0.02 -2.40 0.55 1.60 0 0</pose>
+    </include>
+  
+   
+  </world>
+</sdf>
