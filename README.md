@@ -27,21 +27,20 @@ The architecture is divided into three critical layers to ensure maximum safety:
 3. **Data & Telemetry Layer:** Records mission logs for compliance and accountability, crucial for hospital documentation standards.
 
 ## 5. Project Structure
-
-Hospital Logestic Drone /
-├── README.md               # Deployment and safety documentation
+Hospital-Logistics-Drone/
+├── README.md                # Deployment and safety documentation
 ├── world/
-│   └── Finalproject1.sdf   # Campus-specific virtual environment
+│   └── Finalproject1.sdf    # The main campus-specific virtual environment
 ├── mission_scripts/
-│   └── dron1.py            # Main flight controller logic
+│   └── dron1.py             # Main flight controller and mission logic
 ├── models/
-│   ├── hospital/           # Renamed folder for hospital building models
+│   ├── hospital/            # Hospital building model assets
 │   │   ├── model.config
 │   │   ├── model.sdf
 │   │   └── meshes/
-│   └── helipad/            # Renamed folder for helipad models
+│   └── helipad/             # Helipad model assets
 │       ├── model.config
 │       ├── model.sdf
 │       └── meshes/
-
----
+└── docs/
+    └── compliance_logs/     # (Optional) Documentation for mission performance
