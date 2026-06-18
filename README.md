@@ -1,10 +1,4 @@
-To align the **Hospital Logistics Drone (HLD)** project with the standards and prestige of the **King Faisal Specialist Hospital and Research Centre (KFSHRC)**, the project must emphasize precision, safety, and reliability—key pillars in medical operations.
-
-Here is a tailored project overview for a high-stakes environment like KFSHRC.
-
----
-
-# 🚁 Project: Autonomous Medical Logistics for KFSHRC
+#  Project:Hospital Logistics Drone (HLD) for KFSHRC
 
 ## 1. Project Overview
 
@@ -34,24 +28,20 @@ The architecture is divided into three critical layers to ensure maximum safety:
 
 ## 5. Project Structure
 
-```text
-hld-kfshrc-project/
+Hospital Logestic Drone /
 ├── README.md               # Deployment and safety documentation
 ├── world/
-│   └── kfshrc_campus.sdf   # Campus-specific virtual environment
+│   └── Finalproject1.sdf   # Campus-specific virtual environment
 ├── mission_scripts/
-│   ├── delivery_mission.py # Main flight controller logic
-│   └── safety_monitor.py   # Background safety routines
+│   └── dron1.py            # Main flight controller logic
 ├── models/
-│   ├── hospital_buildings/ # Custom KFSHRC building meshes
-│   └── logistics_helipads/ # Dedicated delivery zones
-└── docs/
-    └── compliance_logs/    # Documentation for mission performance
-
-```
+│   ├── hospital/           # Renamed folder for hospital building models
+│   │   ├── model.config
+│   │   ├── model.sdf
+│   │   └── meshes/
+│   └── helipad/            # Renamed folder for helipad models
+│       ├── model.config
+│       ├── model.sdf
+│       └── meshes/
 
 ---
-
-### Implementation Note for KFSHRC
-
-For a medical facility like KFSHRC, I recommend focusing your next development phase on **Encrypted Telemetry**. Unlike generic projects, a hospital system requires the flight data to be secured so that unauthorized users cannot intercept the delivery status of critical medical payloads.
