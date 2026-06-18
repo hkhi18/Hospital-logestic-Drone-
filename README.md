@@ -27,6 +27,7 @@ The architecture is divided into three critical layers to ensure maximum safety:
 3. **Data & Telemetry Layer:** Records mission logs for compliance and accountability, crucial for hospital documentation standards.
 
 ## 5. Project Structure
+
 Hospital-Logistics-Drone/
 ├── README.md                # Deployment and safety documentation
 ├── world/
