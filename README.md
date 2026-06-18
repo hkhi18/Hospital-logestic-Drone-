@@ -28,20 +28,14 @@ The architecture is divided into three critical layers to ensure maximum safety:
 
 ## 5. Project Structure
 
-Hospital-Logistics-Drone/
-├── README.md                # Deployment and safety documentation
+Hhospital-logistics-drone/
+├── README.md           # Project documentation and setup guide
 ├── world/
-│   └── Finalproject1.sdf    # The main campus-specific virtual environment
-├── mission_scripts/
-│   └── dron1.py             # Main flight controller and mission logic
+│   └── finalproject1.sdf # The main hospital campus world file
 ├── models/
-│   ├── hospital/            # Hospital building model assets
-│   │   ├── model.config
-│   │   ├── model.sdf
-│   │   └── meshes/
-│   └── helipad/             # Helipad model assets
-│       ├── model.config
-│       ├── model.sdf
-│       └── meshes/
-└── docs/
-    └── compliance_logs/     # (Optional) Documentation for mission performance
+│   ├── hospital/       # Hospital building assets & meshes
+│   ├── helipad/        # Helipad assets & configuration
+│   └── fountain/       # Decorative site models
+├── scripts/
+│   └── mission.py      # Main Python script using MAVSDK
+└── meshes/             # 3D GLB/DAE files for all structures
